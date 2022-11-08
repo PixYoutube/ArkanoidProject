@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public static int HightScore;
     Text text;
 
-    // Player
+    // Player speed
     [SerializeField] float Speed = 0.01f;
 
     private void Start()
