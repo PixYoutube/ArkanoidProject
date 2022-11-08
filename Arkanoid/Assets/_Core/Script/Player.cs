@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
         text = GetComponent<Text>();
         ResetPoints();
         HightScore = PlayerPrefs.GetInt("HightScore", HightScore);
+        text.text = HightScore.ToString();
     }
     private void Update()
     {
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour
             HightScore = Score;
             text.text = "" + Score;
             PlayerPrefs.SetInt("HightScore", HightScore);
+            PlayerPrefs.Save();
         }
 
         PlayerMouvement();
