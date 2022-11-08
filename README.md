@@ -1,7 +1,4 @@
 # ArkanoidProject
-Player
---
-Mouvement ""
-public score
---
-PlayerMouvment
+- Script player
+  - Score management
+  - Player mouvement
