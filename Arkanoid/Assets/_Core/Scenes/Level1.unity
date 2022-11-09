@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 561000791}
   - component: {fileID: 561000790}
   - component: {fileID: 561000789}
+  - component: {fileID: 561000793}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -460,6 +461,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.942146, y: 1.0239964}
   m_EdgeRadius: 0
+--- !u!114 &561000793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561000787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f15376ca3166044f8a7f1d54b23e5bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,7 +1172,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!114 &922130836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2905,8 +2918,9 @@ GameObject:
   - component: {fileID: 2017278260}
   - component: {fileID: 2017278259}
   - component: {fileID: 2017278258}
-  m_Layer: 0
-  m_Name: Circle
+  - component: {fileID: 2017278262}
+  m_Layer: 6
+  m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2928,7 +2942,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a6172f57c11bbfa48a3c04e52cc08d54, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -3008,11 +3022,24 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017278257}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.18527016, w: 0.9826877}
   m_LocalPosition: {x: 0, y: -3.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 73633588}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 21.354}
+--- !u!114 &2017278262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017278257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cee20bea13abad48be0c6fe4737b0f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballSpeed: 500

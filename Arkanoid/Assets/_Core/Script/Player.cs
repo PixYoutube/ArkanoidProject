@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     // Player speed
     [SerializeField] float Speed = 0.01f;
 
+    #region Meths Unity
     private void Start()
     {
         // Set score and restore hight score
@@ -32,6 +33,9 @@ public class Player : MonoBehaviour
 
         PlayerMouvement();
     }
+    #endregion
+    #region Meths
+    #region Points
     public static void AddPoints(int _pointsToAdd)
     {
         // Set points
@@ -42,6 +46,8 @@ public class Player : MonoBehaviour
         // Reset points
         Score = 0;
     }
+    #endregion
+    #region Mouvements
     void PlayerMouvement()
     {
         // Set input to Move
@@ -50,4 +56,12 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
             transform.position += Vector3.right * Speed;
     }
+    #endregion
+    #region Game Over
+    public static void GameOver()
+    {
+        Debug.Log("Game Over !");
+    }
+    #endregion
+    #endregion
 }
