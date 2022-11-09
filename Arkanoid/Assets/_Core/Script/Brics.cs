@@ -1,9 +1,11 @@
 using UnityEngine;
 
-public class Brics1 : MonoBehaviour
+public class Brics : MonoBehaviour
 {
     [SerializeField] float PV;
     [SerializeField] int pts;
+
+    // Define Layers number
     int Layers = 6;
 
     #region Meth Unity
