@@ -63,5 +63,11 @@ public class Player : MonoBehaviour
         Debug.Log("Game Over !");
     }
     #endregion
+    #region Win
+    public static void Win()
+    {
+        Debug.Log("Win !");
+    }
+    #endregion
     #endregion
 }
