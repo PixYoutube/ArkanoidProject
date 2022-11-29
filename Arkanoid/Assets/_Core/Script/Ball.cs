@@ -15,7 +15,6 @@ public class Ball : MonoBehaviour
         if (rb) return;
         rb = GetComponent<Rigidbody2D>();
 
-        // Set first force
         rb.AddForce(new Vector2(20 * Time.deltaTime * ballSpeed, 20 * Time.deltaTime * ballSpeed));
     }
     private void Update()

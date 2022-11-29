@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -1712,12 +1712,12 @@ TextureImporter:
       PowerUp_31: 1375174734
       PowerUp_50: -228176272
       PowerUp_73: 865883017
-      PowerUp_66: 921065
       PowerUp_28: -889004701
+      PowerUp_29: -1246486893
       PowerUp_30: -1608467053
       PowerUp_62: -1937794499
       PowerUp_39: -169354530
-      PowerUp_29: -1246486893
+      PowerUp_66: 921065
       PowerUp_23: 385801467
       PowerUp_26: 958156214
       PowerUp_20: 370540830
