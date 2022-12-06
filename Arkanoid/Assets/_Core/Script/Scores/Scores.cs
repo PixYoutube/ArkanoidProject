@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class Scores : MonoBehaviour
 {
-    public static int Score;
-    public static int HightScore;
+    [HideInInspector] public static int Score;
+    [HideInInspector] public static int HightScore;
     [SerializeField] Text HightScoreText;
     [SerializeField] Text ScoreText;
 

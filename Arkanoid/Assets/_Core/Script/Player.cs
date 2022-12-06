@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    // Mouse sensitivity
     [SerializeField] float sens;
     float xPosition;
 
