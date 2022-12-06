@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    #region Settings
     // Speed of ball
     [SerializeField] float ballSpeed;
 
     // Ball physics
     Vector3 lastVelocity;
     Rigidbody2D rb;
+    #endregion
 
     #region Meth Unity
     private void Start()
@@ -15,6 +17,7 @@ public class Ball : MonoBehaviour
         if (rb) return;
         rb = GetComponent<Rigidbody2D>();
 
+        // Add first force
         rb.AddForce(new Vector2(20 * Time.deltaTime * ballSpeed, 20 * Time.deltaTime * ballSpeed));
     }
     private void Update()

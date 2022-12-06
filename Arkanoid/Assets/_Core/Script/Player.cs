@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    #region Settings
     // Mouse sensitivity
     [SerializeField] float sens;
     float xPosition;
+    #endregion
 
     #region Meths Unity
     private void Update()

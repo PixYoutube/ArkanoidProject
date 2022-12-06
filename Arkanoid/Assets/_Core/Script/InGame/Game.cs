@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class Game : MonoBehaviour
 {
+    #region Settings
     // Define Briks object parent and Layers
     [SerializeField] GameObject parent;
     [SerializeField] string nextLvl;
     [SerializeField] string menuGameOver;
+
     int Layers = 6;
+    #endregion
 
     #region Meths Unity
     private void Start()

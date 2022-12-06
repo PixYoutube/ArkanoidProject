@@ -3,11 +3,16 @@ using UnityEngine.UI;
 
 public class Scores : MonoBehaviour
 {
+    #region Settings
     [HideInInspector] public static int Score;
     [HideInInspector] public static int HightScore;
+
+    // Set display of Score
     [SerializeField] Text HightScoreText;
     [SerializeField] Text ScoreText;
+    #endregion
 
+    #region Meths Unity
     private void Start()
     {
         GetScore();
@@ -16,6 +21,9 @@ public class Scores : MonoBehaviour
     {
         SetHightScore();
     }
+    #endregion
+    #region Meths
+    #region Get and Set Scores
     void GetScore()
     {
         HightScore = PlayerPrefs.GetInt("HightScore", HightScore);
@@ -36,10 +44,14 @@ public class Scores : MonoBehaviour
         PlayerPrefs.SetInt("Score", Score);
         ScoreText.text = "" + Score.ToString();
     }
+    #endregion
+    #region Add point in Score
     public static void AddPoints(int _point, int _powerUpScore)
     {
         Score += _point * _powerUpScore;
     }
+    #endregion
+    #region Reset Scores
     public static void ResetPoints()
     {
         Score = 0;
@@ -53,4 +65,6 @@ public class Scores : MonoBehaviour
         PlayerPrefs.Save();
         HightScoreText.text = "" + HightScore.ToString();
     }
+    #endregion
+    #endregion
 }

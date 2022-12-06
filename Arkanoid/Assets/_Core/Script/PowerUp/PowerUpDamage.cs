@@ -2,12 +2,17 @@ using UnityEngine;
 
 public class PowerUpDamage : MonoBehaviour
 {
+    #region Settings
+    // Set number of layer
     [SerializeField] int Layer = 7;
     [SerializeField] float delay = 10;
     [SerializeField] float speed = 3;
+
     static int powerUp = 1;
     static int DieBricks = 0;
+    #endregion
 
+    #region Meths Unity
     private void Update()
     {
         Direction();
@@ -21,6 +26,9 @@ public class PowerUpDamage : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    #endregion
+    #region Meths
+    #region On or Off
     void PowerUpOn()
     {
         powerUp = 2;
@@ -29,10 +37,8 @@ public class PowerUpDamage : MonoBehaviour
     {
         powerUp = 1;
     }
-    public static int PowerUpResult()
-    {
-        return powerUp;
-    }
+    #endregion
+    #region Delay
     void CounterPowerUp()
     {
         if (powerUp == 2)
@@ -45,10 +51,14 @@ public class PowerUpDamage : MonoBehaviour
             }
         }
     }
+    #endregion
+    #region PowerUp direction
     void Direction()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y - speed, transform.position.z);
     }
+    #endregion
+    #region Add and reset Die of the brics
     public static void AddDieBricks()
     {
         DieBricks++;
@@ -57,9 +67,17 @@ public class PowerUpDamage : MonoBehaviour
     {
         DieBricks = 0;
     }
+    #endregion
+    #region Result PowerUp
+    public static int PowerUpResult()
+    {
+        return powerUp;
+    }
     public static int ResultDieBricks()
     {
         return DieBricks;
     }
+    #endregion
+    #endregion
 
 }
